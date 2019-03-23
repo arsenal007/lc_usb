@@ -36,6 +36,12 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP FRT5
+D FORWARD INDUSTRIAL, Miniature Dual Pole Relay, DIP-like package
+K relay monostable
+F https://www.elpro.org/de/index.php?controller=attachment&id_attachment=8663
+$ENDCMP
+#
 $CMP LD1117S12TR_SOT223
 D 800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 1.2V, SOT-223
 K REGULATOR LDO 1.2V

@@ -23,8 +23,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:lc_usb
-LIBS:Relay
-LIBS:Connector
 LIBS:lc_usb-cache
 EELAYER 25 0
 EELAYER END
@@ -96,7 +94,9 @@ F 3 "" H 6900 4700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 4250 4950 3550
+	4950 4250 4950 3650
+Wire Wire Line
+	4950 3650 4950 3550
 Wire Wire Line
 	4950 3650 5050 3650
 Wire Wire Line
@@ -124,7 +124,25 @@ F 3 "" H 5500 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 1300 10700 1300
+	3450 1300 3800 1300
+Wire Wire Line
+	3800 1300 4150 1300
+Wire Wire Line
+	4150 1300 4950 1300
+Wire Wire Line
+	4950 1300 5500 1300
+Wire Wire Line
+	5500 1300 5700 1300
+Wire Wire Line
+	5700 1300 8750 1300
+Wire Wire Line
+	8750 1300 9250 1300
+Wire Wire Line
+	9250 1300 9350 1300
+Wire Wire Line
+	9350 1300 10350 1300
+Wire Wire Line
+	10350 1300 10700 1300
 $Comp
 L R_Small R7
 U 1 1 5C946E41
@@ -148,18 +166,36 @@ F 3 "" H 4150 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1700 1300 2850 1300
+	1700 1300 2300 1300
+Wire Wire Line
+	2300 1300 2550 1300
+Wire Wire Line
+	2550 1300 2650 1300
+Wire Wire Line
+	2650 1300 2850 1300
 Wire Wire Line
 	4800 2550 5500 2550
 Wire Wire Line
-	5500 2250 5500 3450
+	5500 2250 5500 2550
 Wire Wire Line
-	5350 3250 5950 3250
+	5500 2550 5500 3250
+Wire Wire Line
+	5500 3250 5500 3450
+Wire Wire Line
+	5350 3250 5500 3250
+Wire Wire Line
+	5500 3250 5950 3250
 Connection ~ 5500 2550
 Wire Wire Line
-	4000 3150 4750 3150
+	4000 3150 4150 3150
 Wire Wire Line
-	4150 2250 4150 3550
+	4150 3150 4750 3150
+Wire Wire Line
+	4150 2250 4150 2550
+Wire Wire Line
+	4150 2550 4150 3150
+Wire Wire Line
+	4150 3150 4150 3550
 Wire Wire Line
 	4600 2550 4150 2550
 Connection ~ 4150 2550
@@ -169,7 +205,9 @@ Wire Wire Line
 Wire Wire Line
 	5500 3800 4650 3800
 Wire Wire Line
-	4650 3350 4650 3900
+	4650 3350 4650 3800
+Wire Wire Line
+	4650 3800 4650 3900
 Wire Wire Line
 	4650 3350 4750 3350
 $Comp
@@ -210,24 +248,36 @@ $EndComp
 Wire Wire Line
 	3650 3150 3650 3650
 Wire Wire Line
-	2650 3150 3800 3150
+	2650 3150 2950 3150
 Wire Wire Line
-	3650 4900 3650 3850
+	2950 3150 3650 3150
 Wire Wire Line
-	3650 4250 4950 4250
+	3650 3150 3800 3150
 Wire Wire Line
-	4650 4100 4650 4350
+	3650 4900 3650 4250
+Wire Wire Line
+	3650 4250 3650 3850
+Wire Wire Line
+	3650 4250 4150 4250
+Wire Wire Line
+	4150 4250 4650 4250
+Wire Wire Line
+	4650 4250 4950 4250
+Wire Wire Line
+	4650 4100 4650 4250
+Wire Wire Line
+	4650 4250 4650 4350
 Connection ~ 4650 4250
 Connection ~ 4950 3650
 $Comp
 L L_Small L1
 U 1 1 5C947898
-P 2950 3400
-F 0 "L1" H 2980 3440 50  0000 L CNN
-F 1 "100uH" H 2980 3360 50  0000 L CNN
-F 2 "lc_usb:Choke_Toroid_horizontal_Diameter10-5mm_Amidon-T37" H 2950 3400 50  0001 C CNN
-F 3 "" H 2950 3400 50  0001 C CNN
-	1    2950 3400
+P 2950 3450
+F 0 "L1" H 2800 3400 50  0000 L CNN
+F 1 "100uH" H 2650 3500 50  0000 L CNN
+F 2 "lc_usb:Choke_Toroid_horizontal_Diameter10-5mm_Amidon-T37" H 2950 3450 50  0001 C CNN
+F 3 "" H 2950 3450 50  0001 C CNN
+	1    2950 3450
 	-1   0    0    1   
 $EndComp
 Connection ~ 3650 3150
@@ -269,7 +319,9 @@ F 3 "" H 5950 1900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2050 1900 5850 1900
+	2050 1900 5700 1900
+Wire Wire Line
+	5700 1900 5850 1900
 $Comp
 L R_Small R1
 U 1 1 5C94807E
@@ -356,7 +408,9 @@ F 3 "" H 10350 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10200 2050 10950 2050
+	10200 2050 10350 2050
+Wire Wire Line
+	10350 2050 10950 2050
 Wire Wire Line
 	10350 2050 10350 1750
 Wire Wire Line
@@ -370,7 +424,9 @@ Wire Wire Line
 	9350 1750 9350 1300
 Connection ~ 9350 1300
 Wire Wire Line
-	9250 1300 9250 1750
+	9250 1300 9250 1700
+Wire Wire Line
+	9250 1700 9250 1750
 Connection ~ 9250 1300
 $Comp
 L C_Small C1
@@ -411,23 +467,14 @@ $EndComp
 Wire Wire Line
 	9250 4650 9250 4700
 Wire Wire Line
-	9250 4700 9350 4700
+	9250 4700 9300 4700
+Wire Wire Line
+	9300 4700 9350 4700
 Wire Wire Line
 	9350 4700 9350 4650
 Wire Wire Line
 	9300 4700 9300 4800
 Connection ~ 9300 4700
-$Comp
-L FRT5 K1
-U 1 1 5C94970D
-P 2150 3750
-F 0 "K1" V 3050 3950 50  0000 L CNN
-F 1 "FRT5" V 3150 3900 50  0000 L CNN
-F 2 "Relays_ThroughHole:Relay_DPDT_FRT5" H 2900 3800 50  0001 C CNN
-F 3 "" H 3000 3900 50  0001 C CNN
-	1    2150 3750
-	0    1    1    0   
-$EndComp
 $Comp
 L GND #PWR04
 U 1 1 5C949945
@@ -453,12 +500,14 @@ $EndComp
 Wire Wire Line
 	2650 3150 2650 4250
 Wire Wire Line
-	2950 3150 2950 3300
+	2950 3150 2950 3350
 Connection ~ 2950 3150
 Wire Wire Line
 	1650 3950 1650 4900
 Wire Wire Line
-	1350 4900 3650 4900
+	1350 4900 1650 4900
+Wire Wire Line
+	1650 4900 3650 4900
 Connection ~ 3650 4250
 Wire Wire Line
 	1700 3550 1850 3550
@@ -479,7 +528,11 @@ Wire Wire Line
 Wire Wire Line
 	8000 4700 7450 4700
 Wire Wire Line
-	8000 4150 8000 4700
+	8000 4150 8000 4250
+Wire Wire Line
+	8000 4250 8000 4350
+Wire Wire Line
+	8000 4350 8000 4700
 Wire Wire Line
 	8000 4150 8300 4150
 Wire Wire Line
@@ -511,12 +564,16 @@ F 3 "" V 2150 3150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1450 3150 2050 3150
+	1450 3150 1700 3150
+Wire Wire Line
+	1700 3150 2050 3150
 Connection ~ 1700 3150
 Wire Wire Line
 	2250 3150 2550 3150
 Wire Wire Line
-	2550 1300 2550 3550
+	2550 1300 2550 3150
+Wire Wire Line
+	2550 3150 2550 3550
 Wire Wire Line
 	2550 3550 2450 3550
 $Comp
@@ -623,7 +680,9 @@ $EndComp
 Wire Wire Line
 	1300 1900 1300 1950
 Wire Wire Line
-	1300 1950 1400 1950
+	1300 1950 1350 1950
+Wire Wire Line
+	1350 1950 1400 1950
 Wire Wire Line
 	1400 1950 1400 1900
 Wire Wire Line
@@ -668,7 +727,9 @@ $EndComp
 Wire Wire Line
 	10450 3100 10450 3000
 Wire Wire Line
-	10250 3100 10550 3100
+	10250 3100 10450 3100
+Wire Wire Line
+	10450 3100 10550 3100
 Wire Wire Line
 	10250 3100 10250 2950
 Wire Wire Line
@@ -678,7 +739,9 @@ Wire Wire Line
 Wire Wire Line
 	10250 2750 10250 2600
 Wire Wire Line
-	10250 2600 10550 2600
+	10250 2600 10450 2600
+Wire Wire Line
+	10450 2600 10550 2600
 Wire Wire Line
 	10450 2600 10450 2700
 $Comp
@@ -816,8 +879,27 @@ Wire Wire Line
 Wire Wire Line
 	2450 3850 2950 3850
 Wire Wire Line
-	2950 3500 2950 4450
+	2950 3550 2950 3850
+Wire Wire Line
+	2950 3850 2950 4450
 Wire Wire Line
 	2950 4450 2450 4450
 Connection ~ 2950 3850
+$Comp
+L FRT5 K1
+U 1 1 5C960142
+P 2150 3750
+F 0 "K1" V 3000 3900 50  0000 L CNN
+F 1 "FRT5" V 3100 3800 50  0000 L CNN
+F 2 "Relays_ThroughHole:Relay_DPDT_FRT5" H 2900 3800 50  0001 C CNN
+F 3 "" H 3000 3900 50  0001 C CNN
+	1    2150 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 2950 5050 2850
+Wire Wire Line
+	5050 2850 5150 2850
+Wire Wire Line
+	5150 2850 5150 2950
 $EndSCHEMATC
