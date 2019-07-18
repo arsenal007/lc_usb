@@ -21,7 +21,7 @@ signals:
     void signal_ResetCalibration( void );
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
@@ -55,7 +55,7 @@ private slots:
     void on_radioButton10000_clicked();*/
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* ui;
     QThread*        _workerThread;
     Worker*         _workerObject;
     QLabel*         _connectionIconLabel;
@@ -66,6 +66,8 @@ private:
     QMenu*          _menu;
     QAction*        _act0;
     QAction*        _act1;
+
+
 };
 
 #endif // MAINWINDOW_H

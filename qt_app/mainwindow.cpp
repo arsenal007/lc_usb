@@ -92,24 +92,29 @@ void MainWindow::slot_DeviceConnected()
 
 void MainWindow::slot_DeviceDisconnected(const hid_device_info * info)
 {
-  disconnect(ui->tabs, SIGNAL(currentChanged(int)), 0, 0);
-  auto id = ui->tabs->indexOf( ui->tabC );
-  if ( -1 < id ) {
-      ui->tabC->setEnabled(false);
-      ui->tabs->removeTab( id );
-    }
+  disconnect(ui->tabs, SIGNAL(currentChanged(int)), nullptr, nullptr);
 
-  id = ui->tabs->indexOf( ui->tabL );
-  if ( -1 < id ) {
-      ui->tabL->setEnabled(false);
-      ui->tabs->removeTab( id );
-    }
+  auto remove_tab = [&tabs = ui->tabs](auto & tab){
+      auto id = tabs->indexOf( tab );
+      if ( -1 < id ) {
+          tab->setEnabled(false);
+          tabs->removeTab( id );
+        }
+  };
 
-  id = ui->tabs->indexOf( ui->tabUSB );
+  remove_tab( ui->tabC );
+  remove_tab( ui->tabL );
+  remove_tab( ui->tabCalC );
+  remove_tab( ui->tabCalL );
+  remove_tab( ui->tabUSB );
+  ui->progressBar->setValue(0);
+  ui->progressBar->setEnabled( false );
+
+  auto id = ui->tabs->indexOf( ui->tabUSB );
   if ( id < 0 ) {
-      ui->tabs->insertTab(0, ui->tabUSB, "Inductance");
+      ui->tabs->insertTab(0, ui->tabUSB, "HID USB");
       ui->tabUSB->setEnabled( true );
-    }
+  }
   int i = 0;
   while (info) {
       auto vendor = QString("%1").arg(info->vendor_id, 4, 16, QChar('0')).toUpper().prepend("0x");

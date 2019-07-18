@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created by: Qt User Interface Compiler version 5.13.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,23 +10,22 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QListWidget>
-#include <QtGui/QMainWindow>
-#include <QtGui/QProgressBar>
-#include <QtGui/QPushButton>
-#include <QtGui/QStatusBar>
-#include <QtGui/QTabWidget>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QWidget>
+#include <QtGui/QIcon>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QProgressBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -67,16 +66,16 @@ public:
     QHBoxLayout *horizontalLayout;
     QWidget *widgetCalibrationCParams;
     QGridLayout *gridLayout_2;
-    QLineEdit *lineEdit_L_T;
+    QLabel *label_L_msg;
     QLineEdit *lineEdit_L;
-    QLabel *label_P_L;
-    QLabel *label_SDT_L;
     QLabel *label_nH;
+    QLabel *label_SDT_L;
+    QLabel *label_P_L;
+    QLineEdit *lineEdit_L_T;
     QLabel *label_cal_L;
     QCheckBox *checkBoxAvg_L;
-    QLabel *label_L_msg;
+    QPushButton *pushButton;
     QPushButton *pushButton_L_Go;
-    QPushButton *pushButton_L_Save;
     QGridLayout *gridLayout_4;
     QLabel *label_D;
     QLabel *label_F;
@@ -296,12 +295,13 @@ public:
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        lineEdit_L_T = new QLineEdit(widgetCalibrationCParams);
-        lineEdit_L_T->setObjectName(QString::fromUtf8("lineEdit_L_T"));
-        sizePolicy1.setHeightForWidth(lineEdit_L_T->sizePolicy().hasHeightForWidth());
-        lineEdit_L_T->setSizePolicy(sizePolicy1);
+        label_L_msg = new QLabel(widgetCalibrationCParams);
+        label_L_msg->setObjectName(QString::fromUtf8("label_L_msg"));
+        sizePolicy1.setHeightForWidth(label_L_msg->sizePolicy().hasHeightForWidth());
+        label_L_msg->setSizePolicy(sizePolicy1);
+        label_L_msg->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(lineEdit_L_T, 0, 1, 1, 1);
+        gridLayout_2->addWidget(label_L_msg, 2, 0, 1, 3);
 
         lineEdit_L = new QLineEdit(widgetCalibrationCParams);
         lineEdit_L->setObjectName(QString::fromUtf8("lineEdit_L"));
@@ -310,11 +310,13 @@ public:
 
         gridLayout_2->addWidget(lineEdit_L, 1, 1, 1, 1);
 
-        label_P_L = new QLabel(widgetCalibrationCParams);
-        label_P_L->setObjectName(QString::fromUtf8("label_P_L"));
-        label_P_L->setAlignment(Qt::AlignCenter);
+        label_nH = new QLabel(widgetCalibrationCParams);
+        label_nH->setObjectName(QString::fromUtf8("label_nH"));
+        sizePolicy.setHeightForWidth(label_nH->sizePolicy().hasHeightForWidth());
+        label_nH->setSizePolicy(sizePolicy);
+        label_nH->setAlignment(Qt::AlignCenter);
 
-        gridLayout_2->addWidget(label_P_L, 0, 2, 1, 1);
+        gridLayout_2->addWidget(label_nH, 1, 2, 1, 1);
 
         label_SDT_L = new QLabel(widgetCalibrationCParams);
         label_SDT_L->setObjectName(QString::fromUtf8("label_SDT_L"));
@@ -324,13 +326,18 @@ public:
 
         gridLayout_2->addWidget(label_SDT_L, 0, 0, 1, 1);
 
-        label_nH = new QLabel(widgetCalibrationCParams);
-        label_nH->setObjectName(QString::fromUtf8("label_nH"));
-        sizePolicy.setHeightForWidth(label_nH->sizePolicy().hasHeightForWidth());
-        label_nH->setSizePolicy(sizePolicy);
-        label_nH->setAlignment(Qt::AlignCenter);
+        label_P_L = new QLabel(widgetCalibrationCParams);
+        label_P_L->setObjectName(QString::fromUtf8("label_P_L"));
+        label_P_L->setAlignment(Qt::AlignCenter);
 
-        gridLayout_2->addWidget(label_nH, 1, 2, 1, 1);
+        gridLayout_2->addWidget(label_P_L, 0, 2, 1, 1);
+
+        lineEdit_L_T = new QLineEdit(widgetCalibrationCParams);
+        lineEdit_L_T->setObjectName(QString::fromUtf8("lineEdit_L_T"));
+        sizePolicy1.setHeightForWidth(lineEdit_L_T->sizePolicy().hasHeightForWidth());
+        lineEdit_L_T->setSizePolicy(sizePolicy1);
+
+        gridLayout_2->addWidget(lineEdit_L_T, 0, 1, 1, 1);
 
         label_cal_L = new QLabel(widgetCalibrationCParams);
         label_cal_L->setObjectName(QString::fromUtf8("label_cal_L"));
@@ -345,15 +352,14 @@ public:
         sizePolicy1.setHeightForWidth(checkBoxAvg_L->sizePolicy().hasHeightForWidth());
         checkBoxAvg_L->setSizePolicy(sizePolicy1);
 
-        gridLayout_2->addWidget(checkBoxAvg_L, 3, 0, 1, 3);
+        gridLayout_2->addWidget(checkBoxAvg_L, 4, 0, 1, 1);
 
-        label_L_msg = new QLabel(widgetCalibrationCParams);
-        label_L_msg->setObjectName(QString::fromUtf8("label_L_msg"));
-        sizePolicy1.setHeightForWidth(label_L_msg->sizePolicy().hasHeightForWidth());
-        label_L_msg->setSizePolicy(sizePolicy1);
-        label_L_msg->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        pushButton = new QPushButton(widgetCalibrationCParams);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy3);
 
-        gridLayout_2->addWidget(label_L_msg, 2, 0, 1, 3);
+        gridLayout_2->addWidget(pushButton, 4, 1, 1, 1);
 
 
         horizontalLayout->addWidget(widgetCalibrationCParams);
@@ -368,13 +374,6 @@ public:
         pushButton_L_Go->setFont(font2);
 
         horizontalLayout->addWidget(pushButton_L_Go);
-
-        pushButton_L_Save = new QPushButton(tabCalL);
-        pushButton_L_Save->setObjectName(QString::fromUtf8("pushButton_L_Save"));
-        sizePolicy3.setHeightForWidth(pushButton_L_Save->sizePolicy().hasHeightForWidth());
-        pushButton_L_Save->setSizePolicy(sizePolicy3);
-
-        horizontalLayout->addWidget(pushButton_L_Save);
 
         tabs->addTab(tabCalL, QString());
 
@@ -418,7 +417,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabs->setCurrentIndex(3);
+        tabs->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -426,36 +425,36 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "USB LC meter", 0, QApplication::UnicodeUTF8));
-        actionCalibrate->setText(QApplication::translate("MainWindow", "\320\232\320\260\320\273\320\270\320\261\321\200\320\276\320\262\320\272\320\260", 0, QApplication::UnicodeUTF8));
-        actionConnectionState->setText(QApplication::translate("MainWindow", "not connected", 0, QApplication::UnicodeUTF8));
-        label_C->setText(QApplication::translate("MainWindow", "\320\241", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(tabC), QApplication::translate("MainWindow", "Capacitance", 0, QApplication::UnicodeUTF8));
-        label_L->setText(QApplication::translate("MainWindow", "L", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(tabL), QApplication::translate("MainWindow", "Inductance", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(tabUSB), QApplication::translate("MainWindow", "HID USB", 0, QApplication::UnicodeUTF8));
-        lineEdit_C->setText(QApplication::translate("MainWindow", "1000", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "USB LC meter", nullptr));
+        actionCalibrate->setText(QCoreApplication::translate("MainWindow", "\320\232\320\260\320\273\320\270\320\261\321\200\320\276\320\262\320\272\320\260", nullptr));
+        actionConnectionState->setText(QCoreApplication::translate("MainWindow", "not connected", nullptr));
+        label_C->setText(QCoreApplication::translate("MainWindow", "\320\241", nullptr));
+        tabs->setTabText(tabs->indexOf(tabC), QCoreApplication::translate("MainWindow", "Capacitance", nullptr));
+        label_L->setText(QCoreApplication::translate("MainWindow", "L", nullptr));
+        tabs->setTabText(tabs->indexOf(tabL), QCoreApplication::translate("MainWindow", "Inductance", nullptr));
+        tabs->setTabText(tabs->indexOf(tabUSB), QCoreApplication::translate("MainWindow", "HID USB", nullptr));
+        lineEdit_C->setText(QCoreApplication::translate("MainWindow", "1000", nullptr));
         label_C_msg->setText(QString());
-        label_cal_C->setText(QApplication::translate("MainWindow", "calibration C", 0, QApplication::UnicodeUTF8));
-        label_P_C->setText(QApplication::translate("MainWindow", "%", 0, QApplication::UnicodeUTF8));
-        label_pF->setText(QApplication::translate("MainWindow", "pF", 0, QApplication::UnicodeUTF8));
-        lineEdit_C_T->setText(QApplication::translate("MainWindow", "0.002", 0, QApplication::UnicodeUTF8));
-        label_SDT_C->setText(QApplication::translate("MainWindow", " standard deviation threshold", 0, QApplication::UnicodeUTF8));
-        checkBoxAvg_C->setText(QApplication::translate("MainWindow", "AVARGE", 0, QApplication::UnicodeUTF8));
-        pushButton_C_Save->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
-        pushButton_C_Go->setText(QApplication::translate("MainWindow", "Go", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(tabCalC), QApplication::translate("MainWindow", "C Calibration", 0, QApplication::UnicodeUTF8));
-        lineEdit_L_T->setText(QApplication::translate("MainWindow", "0.002", 0, QApplication::UnicodeUTF8));
-        lineEdit_L->setText(QApplication::translate("MainWindow", "89200", 0, QApplication::UnicodeUTF8));
-        label_P_L->setText(QApplication::translate("MainWindow", "%", 0, QApplication::UnicodeUTF8));
-        label_SDT_L->setText(QApplication::translate("MainWindow", " standard deviation threshold", 0, QApplication::UnicodeUTF8));
-        label_nH->setText(QApplication::translate("MainWindow", "nH", 0, QApplication::UnicodeUTF8));
-        label_cal_L->setText(QApplication::translate("MainWindow", "calibration L", 0, QApplication::UnicodeUTF8));
-        checkBoxAvg_L->setText(QApplication::translate("MainWindow", "AVARGE", 0, QApplication::UnicodeUTF8));
+        label_cal_C->setText(QCoreApplication::translate("MainWindow", "calibration C", nullptr));
+        label_P_C->setText(QCoreApplication::translate("MainWindow", "%", nullptr));
+        label_pF->setText(QCoreApplication::translate("MainWindow", "pF", nullptr));
+        lineEdit_C_T->setText(QCoreApplication::translate("MainWindow", "0.002", nullptr));
+        label_SDT_C->setText(QCoreApplication::translate("MainWindow", " standard deviation threshold", nullptr));
+        checkBoxAvg_C->setText(QCoreApplication::translate("MainWindow", "AVARGE", nullptr));
+        pushButton_C_Save->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        pushButton_C_Go->setText(QCoreApplication::translate("MainWindow", "Go", nullptr));
+        tabs->setTabText(tabs->indexOf(tabCalC), QCoreApplication::translate("MainWindow", "C Calibration", nullptr));
         label_L_msg->setText(QString());
-        pushButton_L_Go->setText(QApplication::translate("MainWindow", "Go", 0, QApplication::UnicodeUTF8));
-        pushButton_L_Save->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(tabCalL), QApplication::translate("MainWindow", "L Calibration", 0, QApplication::UnicodeUTF8));
+        lineEdit_L->setText(QCoreApplication::translate("MainWindow", "89200", nullptr));
+        label_nH->setText(QCoreApplication::translate("MainWindow", "nH", nullptr));
+        label_SDT_L->setText(QCoreApplication::translate("MainWindow", " standard deviation threshold", nullptr));
+        label_P_L->setText(QCoreApplication::translate("MainWindow", "%", nullptr));
+        lineEdit_L_T->setText(QCoreApplication::translate("MainWindow", "0.002", nullptr));
+        label_cal_L->setText(QCoreApplication::translate("MainWindow", "calibration L", nullptr));
+        checkBoxAvg_L->setText(QCoreApplication::translate("MainWindow", "AVARGE", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        pushButton_L_Go->setText(QCoreApplication::translate("MainWindow", "Go", nullptr));
+        tabs->setTabText(tabs->indexOf(tabCalL), QCoreApplication::translate("MainWindow", "L Calibration", nullptr));
         label_D->setText(QString());
         label_F->setText(QString());
         label_threschold->setText(QString());
